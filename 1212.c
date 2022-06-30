@@ -11,9 +11,9 @@ int main()
        {
         break;
        }
-    int c=0;
-    unsigned int x,y,z=10;
-       for ( i = 0; i < 10; i++)
+        unsigned int x,y,z=10;
+        int c=0;
+       for ( i = 0; i < 9; i++)
        {
          x=a%z;
          a=a/10;
@@ -24,12 +24,19 @@ int main()
                 carry++;
                 c=1;
             }
+            else
+            c=0;
        }
 
        if (carry==0)
        {
-        printf("No carry operations.\n");
+        printf("No carry operation.\n");
        }
+       else if (carry==1)
+       {
+       printf("1 carry operation.\n");
+       }
+       
        else
        printf("%d carry operations.\n",carry);
 
